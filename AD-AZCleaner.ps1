@@ -1,42 +1,63 @@
-#set-executionpolicy -ExecutionPolicy RemoteSigned -Scope Process
-#Connect-AzureAD
-$prefixes = "MHD-","MHL-","MHDK-", "MSDC-", "MSD", "MSL-", "MSDK-"
+Connect-AzureAD
+$prefixes = "MHD-","MHL-","MHDK-", "MSDC-", "MSD-", "MSL-", "MSDK-"
 
-foreach ($machine in Get-Content .\Devices.txt) {
+foreach ($SN in Get-Content .\CleanerDevices.txt) {
     $count = 0
     $temp = ""
-    if ($machine.Length -gt 8) {
-        $machine = $machine.Substring(12)
+    if ($SN.Length -gt 8) {
+        $SN = $SN.Substring(12)
     }
+
+    #AD
+
     foreach ($prefix in $prefixes) {
-            try {
-                $temp = $prefix + $machine
-                Get-ADComputer -Identity $temp
-                if (Get-ADComputer -Identity $temp) {
-                    if (Remove-ADComputer -Identity $temp) {
-                        Write-Host $machine": AD record deleted"
-                    } else {
-                        Write-Host $machine": AD record deletion skipped"
-                        $temp2 = $temp
-                    }
+        $machine = $prefix + $SN
+        #AD
+        try {
+            if (Get-ADComputer -Identity $machine) {
+                if ((Read-Host "$machine delete AD record (y/n): ") -eq 'y') {
+                    Remove-ADComputer -Identity $machine -Confirm:$false
+                    Write-Host $machine": AD record deleted"
+                } else {
+                    Write-Host $machine": AD record deletion skipped"
                 }
-            } catch {
-                if ($count -ge $prefixes.Length - 1){
-                    Write-Host $machine": AD record not found"
-                }
-                $count++
+            } else {
+                Write-Host $SN": No AD record found"
             }
-    }
-    if ((Get-AzureADDevice -SearchString $machine) -or (Get-AzureADDevice -SearchString $temp)) {
-        $input = Read-Host "Input machine name to delete azure record"
-        if (($machine -contains $input) -or ($temp2 -contains $input)) {
-            Get-AzureADDevice -SearchString $input | Remove-AzureADDevice
-            Write-Host $machine": Azure record deleted"
-        } else {
-            Write-Host $machine": Azure record deletion skipped"
+        } catch {
+            if ($count -ge $prefixes.Length - 1){
+                Write-Host $SN": AD record not found"
+            }
+            $count++
         }
-    } else {
-        Write-Host $machine": Azure record not found"
     }
+
+    #Azure
+
+    $count = 0
+    foreach ($prefix in $prefixes) {
+        $machine = $prefix + $SN
+        if (Get-AzureADDevice -SearchString $SN) {
+            if ((Read-Host "$SN delete Azure record (y/n)") -eq 'y') {
+                Get-AzureADDevice -SearchString $SN | Remove-AzureADDevice
+                Write-Host $SN": Azure record deleted"
+            } else {
+                Write-Host $SN": AD record deletion skipped"
+            }  
+        } elseif (Get-AzureADDevice -SearchString $machine) {
+            if ((Read-Host "$machine delete Azure record (y/n)") -eq 'y') {
+                Get-AzureADDevice -SearchString $machine | Remove-AzureADDevice
+                Write-Host $machine": Azure record deleted"
+            } else {
+                Write-Host $machine": AD record deletion skipped"
+            }
+        } else {
+            if ($count -ge $prefixes.Length - 1){
+                Write-Host $SN": Azure record not found"
+            }
+            $count++
+        }
+    }
+
     Write-Host ""
 }
