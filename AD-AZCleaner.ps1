@@ -19,7 +19,7 @@ foreach ($SN in Get-Content .\CleanerDevices.txt) {
                     Remove-ADComputer -Identity $machine -Confirm:$false
                     Write-Host $machine": AD record deleted"
                 } else {
-                    Write-Host $machine": AD record deletion skipped"
+                    Write-Host $machine": AD record deletion skipped "
                 }
             } else {
                 Write-Host $SN": No AD record found"
