@@ -1,25 +1,64 @@
-$prefixs = "MHL-", "MSL-", "MHDK-", "MSDK-"
+Connect-AzureAD
+$prefixes = "MHD-","MHL-","MHDK-", "MSDC-", "MSD-", "MSL-", "MSDK-"
 
-foreach ($machine in Get-Content .\File.txt*) {
+foreach ($SN in Get-Content .\CleanerDevices.txt) {
     $count = 0
-    foreach ($prefix in $prefixs) {
-            if ($machine.Length -gt 8) {
-                $machine = $machine.Substring(12)
-            }
+    $temp = ""
+    if ($SN.Length -gt 8) {
+        $SN = $SN.Substring(12)
+    }
+    
+    if ((Read-Host "$machine delete AD record (y/n)") -eq 'y') {            
+        #AD
+        foreach ($prefix in $prefixes) {
+            $machine = $prefix + $SN
+            #AD
             try {
-                $temp = $prefix + $machine
-                if (Get-ADComputer -Identity $temp) {
-                    if (Remove-ADComputer -Identity $temp) {
-                        Write-Host $temp": AD record deleted"
+                if (Get-ADComputer -Identity $machine) {
+                    if ((Read-Host "$machine delete AD record (y/n): ") -eq 'y') {
+                        Remove-ADComputer -Identity $machine -Confirm:$false
+                        Write-Host $machine": AD record deleted"
                     } else {
-                        Write-Host $temp": AD record deletion skipped"
+                        Write-Host $machine": AD record deletion skipped "
                     }
+                } else {
+                    Write-Host $SN": No AD record found"
                 }
-            } catch [Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException]{
+            } catch {
+                if ($count -ge $prefixes.Length - 1){
+                    Write-Host $SN": AD record not found"
+                }
                 $count++
-                if ($count -ge $prefixs.Length){
-                    Write-Host $machine": AD record not found"
-                }
             }
         }
+
+        #Azure
+
+        $count = 0
+        foreach ($prefix in $prefixes) {
+            $machine = $prefix + $SN
+            if (Get-AzureADDevice -SearchString $SN) {
+                if ((Read-Host "$SN delete Azure record (y/n)") -eq 'y') {
+                    Get-AzureADDevice -SearchString $SN | Remove-AzureADDevice
+                    Write-Host $SN": Azure record deleted"
+                } else {
+                    Write-Host $SN": AD record deletion skipped"
+                }  
+            } elseif (Get-AzureADDevice -SearchString $machine) {
+                if ((Read-Host "$machine delete Azure record (y/n)") -eq 'y') {
+                    Get-AzureADDevice -SearchString $machine | Remove-AzureADDevice
+                    Write-Host $machine": Azure record deleted"
+                } else {
+                    Write-Host $machine": AD record deletion skipped"
+                }
+            } else {
+                if ($count -ge $prefixes.Length - 1){
+                    Write-Host $SN": Azure record not found"
+                }
+                $count++
+            }
+        }
+
+    }
+    Write-Host ""
 }
