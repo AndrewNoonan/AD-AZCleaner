@@ -11,19 +11,19 @@ foreach ($SN in Get-Content .\test.txt) {
         foreach($prefix in $prefixes) {
             $machine = $prefix + $SN
             if ($device.DeviceName -eq $machine) {
-                Write-Host "InTune| DELETING $machine" -ForegroundColor Red;
+                Write-Host "InTune | DELETING $machine" -ForegroundColor Red;
                 if ((Read-Host $padding"$machine (y/n)") -eq 'y') {
-                    #Insert deletion statement here
+                    #Remove-MgDeviceManagementManagedDevice -ManagedDeviceId $device.Id
                     #Write-Host $padding$Machine"| InTune record deleted" -ForegroundColor Green
-                    Write-Host $device.DeviceName, $device.Id, $device.UserId -ForegroundColor Green
+                    Write-Host $SN, $machine, $device.DeviceName, $device.Id, $device.UserId -ForegroundColor Green
                 } else {
-                    Write-Host $padding$SN"| InTune record deletion skipped" -ForegroundColor Yellow
+                    Write-Host $padding$machine"| InTune record deletion skipped" -ForegroundColor Yellow
                 }                  
             } else {
                 #Write-Host ($Count/($prefixes.Length))
                 $count++ 
                 if (($Count/($prefixes.Length)) -ge $InTuneDevices.Count) {
-                    Write-Host $padding$SN"| InTune record not found" -ForegroundColor Yellow
+                    Write-Host $padding$machine"| InTune record not found" -ForegroundColor Yellow
                 }
             }
         }
@@ -33,9 +33,9 @@ foreach ($SN in Get-Content .\test.txt) {
         $machine = $prefix + $SN
         try {
             if (Get-ADComputer -Identity $machine) {
-                Write-Host "AD| DELETING $machine" -ForegroundColor Red
+                Write-Host "AD | DELETING $machine" -ForegroundColor Red
                 if ((Read-Host $padding$machine" delete AD record (y/n): ") -eq 'y') {
-                    #Remove-ADComputer -Identity $machine -Confirm:$false
+                    Remove-ADComputer -Identity $machine -Confirm:$false
                     Write-Host $padding$machine"| AD record deleted" -ForegroundColor Green
                 } else {
                     Write-Host $padding$machine"| AD record deletion skipped" -ForegroundColor Yellow
@@ -44,29 +44,27 @@ foreach ($SN in Get-Content .\test.txt) {
         } catch {
             $count++
             if (($count/($prefixes.Length)) -ge $SN.Count){
-                Write-Host $padding$SN"| AD record not found" -ForegroundColor Yellow
+                Write-Host $padding$Machine"| AD record not found" -ForegroundColor Yellow
             }
         }
     }
     $count = 0
     foreach ($prefix in $prefixes) {
         $machine = $prefix + $SN
-        try {
             if (Get-AzureADDevice -SearchString $machine ) {
-                Write-Host "EntraID| DELETING $machine" -ForegroundColor Red
-                if ((Read-Host "$padding$SN delete Azure record (y/n)") -eq 'y') {
-                    #Get-AzureADDevice -SearchString $SN | Remove-AzureADDevice
-                    Write-Host $padding$SN"| EntraID record deleted" -ForegroundColor Green
+                Write-Host "EntraID | DELETING $machine" -ForegroundColor Red
+                if ((Read-Host "$padding$machine delete EntraID record (y/n)") -eq 'y') {
+                    Get-AzureADDevice -SearchString $machine | Remove-AzureADDevice
+                    Write-Host $padding$machine"| EntraID record deleted" -ForegroundColor Green
                 } else {
-                    Write-Host $padding$SN": EntraID record deletion skipped" -ForegroundColor Yellow
+                    Write-Host $padding$machine": EntraID record deletion skipped" -ForegroundColor Yellow
                 }  
             }
-        } catch {
+
             $count++
             if (($count/($prefixes.Length)) -ge $SN.Count){
                 Write-Host $padding$SN"| EntraID record not found" -ForegroundColor Yellow
             }
-        }
     }
 }
 #NOTES:
