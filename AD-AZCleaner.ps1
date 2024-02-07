@@ -1,11 +1,16 @@
+#MUST USE ADMIN CREDENTIALS
+Connect-MgGraph
+Connect-AzureAD
+#MUST USE ADMIN CREDENTIALS
+
 $padding = "     "
 $prefixes = "","MHD-","MHL-","MHDK-", "MSDC-", "MSD-", "MSL-", "MSDK-"
 $InTuneDevices = Get-MgDeviceManagementManagedDevice -All | Select-Object DeviceName, Id, UserId
-Connect-MgGraph
-Connect-AzureAD
 
 foreach ($SN in Get-Content .\test.txt) {
     Write-Host $padding"--- $SN ---"$padding -ForegroundColor Cyan
+
+    #InTune record removal
     $count = 0
     foreach($device in $InTuneDevices) {
         foreach($prefix in $prefixes) {
@@ -13,14 +18,13 @@ foreach ($SN in Get-Content .\test.txt) {
             if ($device.DeviceName -eq $machine) {
                 Write-Host "InTune | DELETING $machine" -ForegroundColor Red;
                 if ((Read-Host $padding"$machine (y/n)") -eq 'y') {
-                    #Remove-MgDeviceManagementManagedDevice -ManagedDeviceId $device.Id
-                    #Write-Host $padding$Machine"| InTune record deleted" -ForegroundColor Green
-                    Write-Host $SN, $machine, $device.DeviceName, $device.Id, $device.UserId -ForegroundColor Green
+                    Remove-MgDeviceManagementManagedDevice -ManagedDeviceId $device.Id
+                    Write-Host $padding$Machine"| InTune record deleted" -ForegroundColor Green
+                    #Write-Host $SN, $machine, $device.DeviceName, $device.Id, $device.UserId -ForegroundColor Green
                 } else {
                     Write-Host $padding$machine"| InTune record deletion skipped" -ForegroundColor Yellow
                 }                  
             } else {
-                #Write-Host ($Count/($prefixes.Length))
                 $count++ 
                 if (($Count/($prefixes.Length)) -ge $InTuneDevices.Count) {
                     Write-Host $padding$machine"| InTune record not found" -ForegroundColor Yellow
@@ -28,6 +32,10 @@ foreach ($SN in Get-Content .\test.txt) {
             }
         }
     }
+
+    #AD record removal 
+    #This uses try/catch because Get-ADComputer, unlike the others, will return a fatal error
+    #   if the device is not found. This will cause the program to crash/not function.
     $count = 0
     foreach ($prefix in $prefixes) {
         $machine = $prefix + $SN
@@ -48,6 +56,8 @@ foreach ($SN in Get-Content .\test.txt) {
             }
         }
     }
+
+    #EntraID record removal (AKA AzureAD)
     $count = 0
     foreach ($prefix in $prefixes) {
         $machine = $prefix + $SN
@@ -68,4 +78,5 @@ foreach ($SN in Get-Content .\test.txt) {
     }
 }
 #NOTES:
-#Use ($Count/($prefixes.Length)) to calculate what device/total the current loop is on.
+#Use ($Count/($prefixes.Length)) to calculate what prefix/device the current loop is on.
+#
