@@ -48,21 +48,24 @@ foreach ($SN in Get-Content .\CleanerDevices.txt) {
     foreach ($prefix in $prefixes) {
         $machine = $prefix + $SN
         try {
-        if (Get-ADComputer -Identity $machine) {
-            Write-Host "AD | DELETING $machine" -ForegroundColor Red
-            if ((Read-Host $padding$machine" delete AD record (y/n): ") -eq 'y') {
-                try {
-                    Get-ADComputer -Identity $machine | Remove-ADComputer -Confirm:$false
-                    Write-Host $padding$machine"| AD record deleted" -ForegroundColor Green
-                } catch {
-                    Write-Host $padding"Record must be deleted manually" -ForegroundColor Red
+            if (Get-ADComputer -Identity $machine) {
+                Write-Host "AD | DELETING $machine" -ForegroundColor Red
+                if ((Read-Host $padding$machine" delete AD record (y/n): ") -eq 'y') {
+                    try {
+                        if (Get-ADComputer -Identity $machine | Remove-ADComputer -Confirm:$false -erroraction SilentlyContinue) {
+                            Write-Host $padding$machine"| AD record deleted" -ForegroundColor Green
+                        } else {
+                            Write-Host $padding"Record must be deleted manually" -ForegroundColor Red
+                        }
+                    } catch {
+                        Write-Host $padding"You must be an administrator" -ForegroundColor Red
+                    }
+                } else {
+                    Write-Host $padding$machine"| AD record deletion skipped" -ForegroundColor Yellow
                 }
             } else {
-                Write-Host $padding$machine"| AD record deletion skipped" -ForegroundColor Yellow
+                Write-Host "hmm" -ForegroundColor DarkRed
             }
-        } else {
-            Write-Host "hmm" -ForegroundColor DarkRed
-        }
         } catch {
             $count++
             if (($count/($prefixes.Length)) -ge $SN.Count){
