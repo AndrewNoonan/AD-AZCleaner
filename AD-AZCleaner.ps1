@@ -52,9 +52,10 @@ foreach ($SN in Get-Content .\CleanerDevices.txt) {
                 Write-Host "AD | DELETING $machine" -ForegroundColor Red
                 if ((Read-Host $padding$machine" delete AD record (y/n): ") -eq 'y') {
                     try {
-                        if (Get-ADComputer -Identity $machine | Remove-ADComputer -Confirm:$false -erroraction SilentlyContinue) {
+                        try {
+                            Remove-ADComputer -Identity $machine -Confirm:$false
                             Write-Host $padding$machine"| AD record deleted" -ForegroundColor Green
-                        } else {
+                        } catch {
                             Write-Host $padding"Record must be deleted manually" -ForegroundColor Red
                         }
                     } catch {
@@ -74,7 +75,6 @@ foreach ($SN in Get-Content .\CleanerDevices.txt) {
             }
         }
     }
-
     #EntraID record removal (AKA AzureAD)
     $count = 0
     foreach ($prefix in $prefixes) {
@@ -95,5 +95,6 @@ foreach ($SN in Get-Content .\CleanerDevices.txt) {
         }
     }
 }
+Read-Host "Press any key to end program"
 #NOTES:
 #Use ($Count/($prefixes.Length)) to calculate what prefix/device the current loop is on.
