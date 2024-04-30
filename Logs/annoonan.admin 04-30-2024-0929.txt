@@ -1,0 +1,1118 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240430092908
+Username: ACT-MAXOPCO2\annoonan.admin
+RunAs User: ACT-MAXOPCO2\annoonan.admin
+Configuration Name: 
+Machine: MSD-MJ0H6NR8 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\AD-AZCleaner.ps1
+Process ID: 39456
+PSVersion: 5.1.19041.4046
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4046
+BuildVersion: 10.0.19041.4046
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\Logs\annoonan.admin 04-30-2024-0929.txt
+Connecting to Microsoft Graph
+Welcome to Microsoft Graph!
+
+Connected via delegated access using 14d82eec-204b-4c2f-b7e8-296a70dab67e
+Readme: https://aka.ms/graph/sdk/powershell
+SDK Docs: https://aka.ms/graph/sdk/powershell/docs
+API Docs: https://aka.ms/graph/docs
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+Connecting to Microsoft AzureAD
+WARNING: Install the latest PowerShell module, the Microsoft Graph PowerShell SDK, for new features and improvements! https://aka.ms/graphPSmigration
+
+Connected to Microsoft AzureAD
+Gathering devices from InTune, this may take a moment
+Exception calling "Remove" with "2" argument(s): "Count cannot be less than zero.
+Parameter name: count"
+At C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\AD-AZCleaner.ps1:26 char:9
++         $SN.Remove(0, ($Line.Length - 8))
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentOutOfRangeException
+Account                    Environment TenantId                             TenantDomain    AccountType
+-------                    ----------- --------                             ------------    -----------
+annoonan.admin@amergis.com AzureCloud  4ecc6f49-04fd-4b4a-9ee4-c4e679a141d7 maxstaffing.com User
+Exception calling "Remove" with "2" argument(s): "Count cannot be less than zero.
+Parameter name: count"
+At C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\AD-AZCleaner.ps1:26 char:9
++         $SN.Remove(0, ($Line.Length - 8))
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentOutOfRangeException
+
+     --- 1S10MR0004USMJ08XBQD ---
+     1S10MR0004USMJ08XBQD| InTune record not found
+PS>TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+     1S10MR0004USMJ08XBQD| AD record not found
+     1S10MR0004USMJ08XBQD| EntraID record not found
+Exception calling "Remove" with "2" argument(s): "Count cannot be less than zero.
+Parameter name: count"
+At C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\AD-AZCleaner.ps1:26 char:9
++         $SN.Remove(0, ($Line.Length - 8))
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentOutOfRangeException
+Exception calling "Remove" with "2" argument(s): "Count cannot be less than zero.
+Parameter name: count"
+At C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\AD-AZCleaner.ps1:26 char:9
++         $SN.Remove(0, ($Line.Length - 8))
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentOutOfRangeException
+
+     --- 1S10MR0004USMJ08X7L4 ---
+     1S10MR0004USMJ08X7L4| InTune record not found
+PS>TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+     1S10MR0004USMJ08X7L4| AD record not found
+     1S10MR0004USMJ08X7L4| EntraID record not found
+     --- MJ0BGBA7 ---
+     MJ0BGBA7| InTune record not found
+PS>TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+     MJ0BGBA7| AD record not found
+     MJ0BGBA7| EntraID record not found
+annoonan.admin
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+Transcript started, output file is C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\Logs\annoonan.admin 04-30-2024-0930.txt
+Connecting to Microsoft Graph
+Welcome to Microsoft Graph!
+
+Connected via delegated access using 14d82eec-204b-4c2f-b7e8-296a70dab67e
+Readme: https://aka.ms/graph/sdk/powershell
+SDK Docs: https://aka.ms/graph/sdk/powershell/docs
+API Docs: https://aka.ms/graph/docs
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+Connecting to Microsoft AzureAD
+
+Connected to Microsoft AzureAD
+Gathering devices from InTune, this may take a moment
+Exception calling "Remove" with "2" argument(s): "Count cannot be less than zero.
+Parameter name: count"
+At C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\AD-AZCleaner.ps1:26 char:9
++         $SN = $SN.Remove(0, ($Line.Length - 8))
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentOutOfRangeException
+Account                    Environment TenantId                             TenantDomain    AccountType
+-------                    ----------- --------                             ------------    -----------
+annoonan.admin@amergis.com AzureCloud  4ecc6f49-04fd-4b4a-9ee4-c4e679a141d7 maxstaffing.com User
+Exception calling "Remove" with "2" argument(s): "Count cannot be less than zero.
+Parameter name: count"
+At C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\AD-AZCleaner.ps1:26 char:9
++         $SN = $SN.Remove(0, ($Line.Length - 8))
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentOutOfRangeException
+
+     --- 1S10MR0004USMJ08XBQD ---
+     1S10MR0004USMJ08XBQD| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+     1S10MR0004USMJ08XBQD| AD record not found
+     1S10MR0004USMJ08XBQD| EntraID record not found
+Exception calling "Remove" with "2" argument(s): "Count cannot be less than zero.
+Parameter name: count"
+At C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\AD-AZCleaner.ps1:26 char:9
++         $SN = $SN.Remove(0, ($Line.Length - 8))
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentOutOfRangeException
+Exception calling "Remove" with "2" argument(s): "Count cannot be less than zero.
+Parameter name: count"
+At C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\AD-AZCleaner.ps1:26 char:9
++         $SN = $SN.Remove(0, ($Line.Length - 8))
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentOutOfRangeException
+
+     --- 1S10MR0004USMJ08X7L4 ---
+     1S10MR0004USMJ08X7L4| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+     1S10MR0004USMJ08X7L4| AD record not found
+     1S10MR0004USMJ08X7L4| EntraID record not found
+     --- MJ0BGBA7 ---
+     MJ0BGBA7| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+     MJ0BGBA7| AD record not found
+     MJ0BGBA7| EntraID record not found
+annoonan.admin
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(): "The pipeline has been stopped."
+Transcript started, output file is C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\Logs\annoonan.admin 04-30-2024-0931.txt
+Connecting to Microsoft Graph
+Welcome to Microsoft Graph!
+
+Connected via delegated access using 14d82eec-204b-4c2f-b7e8-296a70dab67e
+Readme: https://aka.ms/graph/sdk/powershell
+SDK Docs: https://aka.ms/graph/sdk/powershell/docs
+API Docs: https://aka.ms/graph/docs
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+Connecting to Microsoft AzureAD
+
+Connected to Microsoft AzureAD
+Gathering devices from InTune, this may take a moment
+20
+     --- 1S10MR0004USMJ08XBQD ---
+     1S10MR0004USMJ08XBQD| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-1S10MR0004USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+     1S10MR0004USMJ08XBQD| AD record not found
+     1S10MR0004USMJ08XBQD| EntraID record not found
+20
+     --- 1S10MR0004USMJ08X7L4 ---
+     1S10MR0004USMJ08X7L4| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-1S10MR0004USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+     1S10MR0004USMJ08X7L4| AD record not found
+     1S10MR0004USMJ08X7L4| EntraID record not found
+8
+     --- MJ0BGBA7 ---
+     MJ0BGBA7| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+     MJ0BGBA7| AD record not found
+     MJ0BGBA7| EntraID record not found
+annoonan.admin
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(): "The pipeline has been stopped."
+Transcript started, output file is C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\Logs\annoonan.admin 04-30-2024-0933.txt
+Connecting to Microsoft Graph
+Welcome to Microsoft Graph!
+
+Connected via delegated access using 14d82eec-204b-4c2f-b7e8-296a70dab67e
+Readme: https://aka.ms/graph/sdk/powershell
+SDK Docs: https://aka.ms/graph/sdk/powershell/docs
+API Docs: https://aka.ms/graph/docs
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+Connecting to Microsoft AzureAD
+
+Connected to Microsoft AzureAD
+Gathering devices from InTune, this may take a moment
+12
+04USMJ08XBQD
+     --- 04USMJ08XBQD ---
+     04USMJ08XBQD| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-04USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-04USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-04USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-04USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-04USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-04USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-04USMJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+     04USMJ08XBQD| AD record not found
+     04USMJ08XBQD| EntraID record not found
+12
+04USMJ08X7L4
+     --- 04USMJ08X7L4 ---
+     04USMJ08X7L4| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-04USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-04USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-04USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-04USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-04USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-04USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-04USMJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+     04USMJ08X7L4| AD record not found
+     04USMJ08X7L4| EntraID record not found
+     --- MJ0BGBA7 ---
+     MJ0BGBA7| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+     MJ0BGBA7| AD record not found
+     MJ0BGBA7| EntraID record not found
+annoonan.admin
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(): "The pipeline has been stopped."
+Transcript started, output file is C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\Logs\annoonan.admin 04-30-2024-0934.txt
+Connecting to Microsoft Graph
+Welcome to Microsoft Graph!
+
+Connected via delegated access using 14d82eec-204b-4c2f-b7e8-296a70dab67e
+Readme: https://aka.ms/graph/sdk/powershell
+SDK Docs: https://aka.ms/graph/sdk/powershell/docs
+API Docs: https://aka.ms/graph/docs
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+Connecting to Microsoft AzureAD
+
+Connected to Microsoft AzureAD
+Gathering devices from InTune, this may take a moment
+     --- MJ08XBQD ---
+     MJ08XBQD| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+     MJ08XBQD| AD record not found
+     MJ08XBQD| EntraID record not found
+     --- MJ08X7L4 ---
+     MJ08X7L4| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+     MJ08X7L4| AD record not found
+     MJ08X7L4| EntraID record not found
+     --- MJ0BGBA7 ---
+     MJ0BGBA7| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+     MJ0BGBA7| AD record not found
+     MJ0BGBA7| EntraID record not found
+annoonan.admin
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(): "The pipeline has been stopped."
+Transcript started, output file is C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\Logs\annoonan.admin 04-30-2024-0938.txt
+Connecting to Microsoft Graph
+Welcome to Microsoft Graph!
+
+Connected via delegated access using 14d82eec-204b-4c2f-b7e8-296a70dab67e
+Readme: https://aka.ms/graph/sdk/powershell
+SDK Docs: https://aka.ms/graph/sdk/powershell/docs
+API Docs: https://aka.ms/graph/docs
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+Connecting to Microsoft AzureAD
+
+Connected to Microsoft AzureAD
+Gathering devices from InTune, this may take a moment
+     --- MJ08XBQD ---
+     MJ08XBQD| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ08XBQD' under: 'DC=act-maxopco2,DC=com'."
+     MJ08XBQD| AD record not found
+     MJ08XBQD| EntraID record not found
+     --- MJ08X7L4 ---
+     MJ08X7L4| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ08X7L4' under: 'DC=act-maxopco2,DC=com'."
+     MJ08X7L4| AD record not found
+     MJ08X7L4| EntraID record not found
+     --- MJ0BGBA7 ---
+     MJ0BGBA7| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0BGBA7' under: 'DC=act-maxopco2,DC=com'."
+     MJ0BGBA7| AD record not found
+     MJ0BGBA7| EntraID record not found
+     --- MJ07L3ZG ---
+     MJ07L3ZG| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ07L3ZG' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ07L3ZG' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ07L3ZG' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ07L3ZG' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ07L3ZG' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ07L3ZG' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ07L3ZG' under: 'DC=act-maxopco2,DC=com'."
+     MJ07L3ZG| AD record not found
+     MJ07L3ZG| EntraID record not found
+     --- MJ08XBQ5 ---
+     MJ08XBQ5| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ08XBQ5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ08XBQ5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ08XBQ5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ08XBQ5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ08XBQ5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ08XBQ5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ08XBQ5' under: 'DC=act-maxopco2,DC=com'."
+     MJ08XBQ5| AD record not found
+     MJ08XBQ5| EntraID record not found
+     --- MJ08XBL0 ---
+     MJ08XBL0| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ08XBL0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ08XBL0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ08XBL0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ08XBL0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ08XBL0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ08XBL0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ08XBL0' under: 'DC=act-maxopco2,DC=com'."
+     MJ08XBL0| AD record not found
+     MJ08XBL0| EntraID record not found
+     --- MJ06KGX7 ---
+     MJ06KGX7| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06KGX7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06KGX7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06KGX7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06KGX7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06KGX7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06KGX7' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06KGX7' under: 'DC=act-maxopco2,DC=com'."
+     MJ06KGX7| AD record not found
+     MJ06KGX7| EntraID record not found
+     --- MJ07DSJP ---
+     MJ07DSJP| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ07DSJP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ07DSJP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ07DSJP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ07DSJP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ07DSJP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ07DSJP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ07DSJP' under: 'DC=act-maxopco2,DC=com'."
+     MJ07DSJP| AD record not found
+     MJ07DSJP| EntraID record not found
+     --- MJ06KGX5 ---
+     MJ06KGX5| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06KGX5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06KGX5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06KGX5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06KGX5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06KGX5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06KGX5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06KGX5' under: 'DC=act-maxopco2,DC=com'."
+     MJ06KGX5| AD record not found
+     MJ06KGX5| EntraID record not found
+     --- MJ06KGXH ---
+     MJ06KGXH| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06KGXH' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06KGXH' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06KGXH' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06KGXH' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06KGXH' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06KGXH' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06KGXH' under: 'DC=act-maxopco2,DC=com'."
+     MJ06KGXH| AD record not found
+     MJ06KGXH| EntraID record not found
+     --- MJ07DSJK ---
+     MJ07DSJK| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ07DSJK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ07DSJK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ07DSJK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ07DSJK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ07DSJK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ07DSJK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ07DSJK' under: 'DC=act-maxopco2,DC=com'."
+     MJ07DSJK| AD record not found
+     MJ07DSJK| EntraID record not found
+     --- MJ0623KD ---
+     MJ0623KD| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0623KD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0623KD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0623KD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0623KD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0623KD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0623KD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0623KD' under: 'DC=act-maxopco2,DC=com'."
+     MJ0623KD| AD record not found
+     MJ0623KD| EntraID record not found
+     --- MJ06DTDL ---
+     MJ06DTDL| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06DTDL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06DTDL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06DTDL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06DTDL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06DTDL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06DTDL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06DTDL' under: 'DC=act-maxopco2,DC=com'."
+     MJ06DTDL| AD record not found
+     MJ06DTDL| EntraID record not found
+     --- MJ07DSK4 ---
+     MJ07DSK4| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ07DSK4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ07DSK4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ07DSK4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ07DSK4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ07DSK4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ07DSK4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ07DSK4' under: 'DC=act-maxopco2,DC=com'."
+     MJ07DSK4| AD record not found
+     MJ07DSK4| EntraID record not found
+     --- MJ06DTCW ---
+     MJ06DTCW| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06DTCW' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06DTCW' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06DTCW' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06DTCW' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06DTCW' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06DTCW' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06DTCW' under: 'DC=act-maxopco2,DC=com'."
+     MJ06DTCW| AD record not found
+     MJ06DTCW| EntraID record not found
+     --- MJ06GYVM ---
+     MJ06GYVM| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06GYVM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06GYVM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06GYVM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06GYVM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06GYVM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06GYVM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06GYVM' under: 'DC=act-maxopco2,DC=com'."
+     MJ06GYVM| AD record not found
+     MJ06GYVM| EntraID record not found
+     --- MJ0AYG9W ---
+     MJ0AYG9W| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0AYG9W' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0AYG9W' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0AYG9W' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0AYG9W' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0AYG9W' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0AYG9W' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0AYG9W' under: 'DC=act-maxopco2,DC=com'."
+     MJ0AYG9W| AD record not found
+     MJ0AYG9W| EntraID record not found
+     --- MJ094P5N ---
+     MJ094P5N| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ094P5N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ094P5N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ094P5N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ094P5N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ094P5N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ094P5N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ094P5N' under: 'DC=act-maxopco2,DC=com'."
+     MJ094P5N| AD record not found
+     MJ094P5N| EntraID record not found
+     --- MJ06GYW9 ---
+     MJ06GYW9| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06GYW9' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06GYW9' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06GYW9' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06GYW9' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06GYW9' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06GYW9' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06GYW9' under: 'DC=act-maxopco2,DC=com'."
+     MJ06GYW9| AD record not found
+     MJ06GYW9| EntraID record not found
+     --- MJ06235R ---
+     MJ06235R| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06235R' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06235R' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06235R' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06235R' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06235R' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06235R' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06235R' under: 'DC=act-maxopco2,DC=com'."
+     MJ06235R| AD record not found
+     MJ06235R| EntraID record not found
+     --- MJ0623H4 ---
+     MJ0623H4| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0623H4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0623H4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0623H4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0623H4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0623H4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0623H4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0623H4' under: 'DC=act-maxopco2,DC=com'."
+     MJ0623H4| AD record not found
+     MJ0623H4| EntraID record not found
+     --- MJ06235A ---
+     MJ06235A| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06235A' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06235A' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06235A' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06235A' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06235A' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06235A' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06235A' under: 'DC=act-maxopco2,DC=com'."
+     MJ06235A| AD record not found
+     MJ06235A| EntraID record not found
+     --- MJ0623JN ---
+     MJ0623JN| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0623JN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0623JN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0623JN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0623JN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0623JN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0623JN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0623JN' under: 'DC=act-maxopco2,DC=com'."
+     MJ0623JN| AD record not found
+     MJ0623JN| EntraID record not found
+     --- MJ08XBPB ---
+     MJ08XBPB| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ08XBPB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ08XBPB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ08XBPB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ08XBPB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ08XBPB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ08XBPB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ08XBPB' under: 'DC=act-maxopco2,DC=com'."
+     MJ08XBPB| AD record not found
+     MJ08XBPB| EntraID record not found
+     --- MJ07BXHU ---
+     MJ07BXHU| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ07BXHU' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ07BXHU' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ07BXHU' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ07BXHU' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ07BXHU' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ07BXHU' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ07BXHU' under: 'DC=act-maxopco2,DC=com'."
+     MJ07BXHU| AD record not found
+     MJ07BXHU| EntraID record not found
+     --- MJ06DTCM ---
+     MJ06DTCM| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06DTCM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06DTCM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06DTCM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06DTCM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06DTCM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06DTCM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06DTCM' under: 'DC=act-maxopco2,DC=com'."
+     MJ06DTCM| AD record not found
+     MJ06DTCM| EntraID record not found
+     --- MJ0BFLGY ---
+     MJ0BFLGY| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0BFLGY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0BFLGY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0BFLGY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0BFLGY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0BFLGY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0BFLGY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0BFLGY' under: 'DC=act-maxopco2,DC=com'."
+     MJ0BFLGY| AD record not found
+     MJ0BFLGY| EntraID record not found
+     --- MJ06KGXF ---
+     MJ06KGXF| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06KGXF' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06KGXF' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06KGXF' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06KGXF' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06KGXF' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06KGXF' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06KGXF' under: 'DC=act-maxopco2,DC=com'."
+     MJ06KGXF| AD record not found
+     MJ06KGXF| EntraID record not found
+     --- MJ0623JJ ---
+     MJ0623JJ| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0623JJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0623JJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0623JJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0623JJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0623JJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0623JJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0623JJ' under: 'DC=act-maxopco2,DC=com'."
+     MJ0623JJ| AD record not found
+     MJ0623JJ| EntraID record not found
+     --- MJ06KGY1 ---
+     MJ06KGY1| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06KGY1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06KGY1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06KGY1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06KGY1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06KGY1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06KGY1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06KGY1' under: 'DC=act-maxopco2,DC=com'."
+     MJ06KGY1| AD record not found
+     MJ06KGY1| EntraID record not found
+     --- MJ06GYVD ---
+     MJ06GYVD| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06GYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06GYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06GYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06GYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06GYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06GYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06GYVD' under: 'DC=act-maxopco2,DC=com'."
+     MJ06GYVD| AD record not found
+     MJ06GYVD| EntraID record not found
+     --- MJ07DSHZ ---
+     MJ07DSHZ| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ07DSHZ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ07DSHZ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ07DSHZ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ07DSHZ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ07DSHZ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ07DSHZ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ07DSHZ' under: 'DC=act-maxopco2,DC=com'."
+     MJ07DSHZ| AD record not found
+     MJ07DSHZ| EntraID record not found
+     --- MJ094P6N ---
+InTune | DELETING MSDC-MJ094P6N
+     MSDC-MJ094P6N| InTune record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ094P6N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ094P6N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ094P6N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ094P6N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ094P6N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ094P6N' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ094P6N' under: 'DC=act-maxopco2,DC=com'."
+     MJ094P6N| AD record not found
+EntraID | DELETING MSDC-MJ094P6N
+     MSDC-MJ094P6N| EntraID record deleted
+     --- MJ06KGVN ---
+     MJ06KGVN| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06KGVN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06KGVN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06KGVN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06KGVN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06KGVN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06KGVN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06KGVN' under: 'DC=act-maxopco2,DC=com'."
+     MJ06KGVN| AD record not found
+     MJ06KGVN| EntraID record not found
+     --- MJ07L3ZB ---
+     MJ07L3ZB| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ07L3ZB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ07L3ZB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ07L3ZB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ07L3ZB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ07L3ZB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ07L3ZB' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ07L3ZB' under: 'DC=act-maxopco2,DC=com'."
+     MJ07L3ZB| AD record not found
+     MJ07L3ZB| EntraID record not found
+     --- MJ06KGVX ---
+InTune | DELETING MHD-MJ06KGVX
+     MHD-MJ06KGVX| InTune record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06KGVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06KGVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06KGVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06KGVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06KGVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06KGVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06KGVX' under: 'DC=act-maxopco2,DC=com'."
+     MJ06KGVX| AD record not found
+EntraID | DELETING MHD-MJ06KGVX
+     MHD-MJ06KGVX| EntraID record deleted
+     --- MJ0BFN0J ---
+     MJ0BFN0J| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0BFN0J' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0BFN0J' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0BFN0J' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0BFN0J' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0BFN0J' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0BFN0J' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0BFN0J' under: 'DC=act-maxopco2,DC=com'."
+     MJ0BFN0J| AD record not found
+     MJ0BFN0J| EntraID record not found
+     --- MJ09AYVD ---
+InTune | DELETING MHDK-MJ09AYVD
+     MHDK-MJ09AYVD| InTune record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ09AYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ09AYVD' under: 'DC=act-maxopco2,DC=com'."
+AD | DELETING MHDK-MJ09AYVD
+     MHDK-MJ09AYVD| AD record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ09AYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ09AYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ09AYVD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ09AYVD' under: 'DC=act-maxopco2,DC=com'."
+EntraID | DELETING MHDK-MJ09AYVD
+     MHDK-MJ09AYVD| EntraID record deleted
+     --- MJ09GTVX ---
+     MJ09GTVX| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ09GTVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ09GTVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ09GTVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ09GTVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ09GTVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ09GTVX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ09GTVX' under: 'DC=act-maxopco2,DC=com'."
+     MJ09GTVX| AD record not found
+     MJ09GTVX| EntraID record not found
+     --- MJ0BFLH2 ---
+     MJ0BFLH2| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0BFLH2' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0BFLH2' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0BFLH2' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0BFLH2' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0BFLH2' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0BFLH2' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0BFLH2' under: 'DC=act-maxopco2,DC=com'."
+     MJ0BFLH2| AD record not found
+     MJ0BFLH2| EntraID record not found
+     --- MJ089EAT ---
+     MJ089EAT| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ089EAT' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ089EAT' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ089EAT' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ089EAT' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ089EAT' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ089EAT' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ089EAT' under: 'DC=act-maxopco2,DC=com'."
+     MJ089EAT| AD record not found
+     MJ089EAT| EntraID record not found
+     --- MJ089E32 ---
+     MJ089E32| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ089E32' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ089E32' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ089E32' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ089E32' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ089E32' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ089E32' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ089E32' under: 'DC=act-maxopco2,DC=com'."
+     MJ089E32| AD record not found
+     MJ089E32| EntraID record not found
+     --- MJ09BAXY ---
+InTune | DELETING MHD-MJ09BAXY
+     MHD-MJ09BAXY| InTune record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ09BAXY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ09BAXY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ09BAXY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ09BAXY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ09BAXY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ09BAXY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ09BAXY' under: 'DC=act-maxopco2,DC=com'."
+     MJ09BAXY| AD record not found
+EntraID | DELETING MHD-MJ09BAXY
+     MHD-MJ09BAXY| EntraID record deleted
+     --- MJ07L3ZD ---
+     MJ07L3ZD| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ07L3ZD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ07L3ZD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ07L3ZD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ07L3ZD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ07L3ZD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ07L3ZD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ07L3ZD' under: 'DC=act-maxopco2,DC=com'."
+     MJ07L3ZD| AD record not found
+     MJ07L3ZD| EntraID record not found
+     --- MJ06KGWP ---
+     MJ06KGWP| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06KGWP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06KGWP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06KGWP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06KGWP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06KGWP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06KGWP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06KGWP' under: 'DC=act-maxopco2,DC=com'."
+     MJ06KGWP| AD record not found
+     MJ06KGWP| EntraID record not found
+     --- MJ06GYW5 ---
+     MJ06GYW5| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06GYW5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06GYW5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ06GYW5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06GYW5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06GYW5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06GYW5' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06GYW5' under: 'DC=act-maxopco2,DC=com'."
+     MJ06GYW5| AD record not found
+     MJ06GYW5| EntraID record not found
+     --- MJ06KGX8 ---
+InTune | DELETING MHDK-MJ06KGX8
+     MHDK-MJ06KGX8| InTune record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ06KGX8' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ06KGX8' under: 'DC=act-maxopco2,DC=com'."
+AD | DELETING MHDK-MJ06KGX8
+     MHDK-MJ06KGX8| AD record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ06KGX8' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ06KGX8' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ06KGX8' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ06KGX8' under: 'DC=act-maxopco2,DC=com'."
+EntraID | DELETING MHDK-MJ06KGX8
+     MHDK-MJ06KGX8| EntraID record deleted
+     --- MJ07L3Y4 ---
+InTune | DELETING MHD-MJ07L3Y4
+     MHD-MJ07L3Y4| InTune record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ07L3Y4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ07L3Y4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ07L3Y4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ07L3Y4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ07L3Y4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ07L3Y4' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ07L3Y4' under: 'DC=act-maxopco2,DC=com'."
+     MJ07L3Y4| AD record not found
+EntraID | DELETING MHD-MJ07L3Y4
+     MHD-MJ07L3Y4| EntraID record deleted
+     --- MJ0K8TYL ---
+     MJ0K8TYL| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0K8TYL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0K8TYL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0K8TYL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0K8TYL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0K8TYL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0K8TYL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0K8TYL' under: 'DC=act-maxopco2,DC=com'."
+     MJ0K8TYL| AD record not found
+     MJ0K8TYL| EntraID record not found
+     --- MJ0GM6H0 ---
+     MJ0GM6H0| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0GM6H0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0GM6H0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0GM6H0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0GM6H0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0GM6H0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0GM6H0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0GM6H0' under: 'DC=act-maxopco2,DC=com'."
+     MJ0GM6H0| AD record not found
+     MJ0GM6H0| EntraID record not found
+     --- MJ0HYNJD ---
+     MJ0HYNJD| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0HYNJD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0HYNJD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0HYNJD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0HYNJD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0HYNJD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0HYNJD' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0HYNJD' under: 'DC=act-maxopco2,DC=com'."
+     MJ0HYNJD| AD record not found
+     MJ0HYNJD| EntraID record not found
+     --- MJ0GMHGQ ---
+     MJ0GMHGQ| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0GMHGQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0GMHGQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0GMHGQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0GMHGQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0GMHGQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0GMHGQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0GMHGQ' under: 'DC=act-maxopco2,DC=com'."
+     MJ0GMHGQ| AD record not found
+     MJ0GMHGQ| EntraID record not found
+     --- MJ0FT7YY ---
+     MJ0FT7YY| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0FT7YY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0FT7YY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0FT7YY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0FT7YY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0FT7YY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0FT7YY' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0FT7YY' under: 'DC=act-maxopco2,DC=com'."
+     MJ0FT7YY| AD record not found
+     MJ0FT7YY| EntraID record not found
+     --- MJ0HWY87 ---
+     MJ0HWY87| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0HWY87' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0HWY87' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0HWY87' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0HWY87' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0HWY87' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0HWY87' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0HWY87' under: 'DC=act-maxopco2,DC=com'."
+     MJ0HWY87| AD record not found
+     MJ0HWY87| EntraID record not found
+     --- MJ0K2ETP ---
+     MJ0K2ETP| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0K2ETP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0K2ETP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0K2ETP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0K2ETP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0K2ETP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0K2ETP' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0K2ETP' under: 'DC=act-maxopco2,DC=com'."
+     MJ0K2ETP| AD record not found
+     MJ0K2ETP| EntraID record not found
+     --- MJ0HWYLQ ---
+     MJ0HWYLQ| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0HWYLQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0HWYLQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0HWYLQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0HWYLQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0HWYLQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0HWYLQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0HWYLQ' under: 'DC=act-maxopco2,DC=com'."
+     MJ0HWYLQ| AD record not found
+     MJ0HWYLQ| EntraID record not found
+     --- MJ0K9LDR ---
+InTune | DELETING MSDC-MJ0K9LDR
+     MSDC-MJ0K9LDR| InTune record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0K9LDR' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0K9LDR' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0K9LDR' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0K9LDR' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0K9LDR' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0K9LDR' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0K9LDR' under: 'DC=act-maxopco2,DC=com'."
+     MJ0K9LDR| AD record not found
+EntraID | DELETING MSDC-MJ0K9LDR
+     MSDC-MJ0K9LDR| EntraID record deleted
+     --- MJ0JQJB1 ---
+     MJ0JQJB1| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0JQJB1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0JQJB1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0JQJB1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0JQJB1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0JQJB1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0JQJB1' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0JQJB1' under: 'DC=act-maxopco2,DC=com'."
+     MJ0JQJB1| AD record not found
+     MJ0JQJB1| EntraID record not found
+     --- MJ0JQJMQ ---
+     MJ0JQJMQ| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0JQJMQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0JQJMQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0JQJMQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0JQJMQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0JQJMQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0JQJMQ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0JQJMQ' under: 'DC=act-maxopco2,DC=com'."
+     MJ0JQJMQ| AD record not found
+     MJ0JQJMQ| EntraID record not found
+     --- MJ0JQJHN ---
+     MJ0JQJHN| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0JQJHN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0JQJHN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0JQJHN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0JQJHN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0JQJHN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0JQJHN' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0JQJHN' under: 'DC=act-maxopco2,DC=com'."
+     MJ0JQJHN| AD record not found
+     MJ0JQJHN| EntraID record not found
+     --- MJ0HWYD0 ---
+     MJ0HWYD0| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0HWYD0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0HWYD0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0HWYD0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0HWYD0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0HWYD0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0HWYD0' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0HWYD0' under: 'DC=act-maxopco2,DC=com'."
+     MJ0HWYD0| AD record not found
+     MJ0HWYD0| EntraID record not found
+     --- MJ0H7X3G ---
+     MJ0H7X3G| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0H7X3G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0H7X3G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0H7X3G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0H7X3G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0H7X3G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0H7X3G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0H7X3G' under: 'DC=act-maxopco2,DC=com'."
+     MJ0H7X3G| AD record not found
+EntraID | DELETING MSDC-MJ0H7X3G
+     MSDC-MJ0H7X3G| EntraID record deleted
+     --- MJ0JQJCJ ---
+     MJ0JQJCJ| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0JQJCJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0JQJCJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0JQJCJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0JQJCJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0JQJCJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0JQJCJ' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0JQJCJ' under: 'DC=act-maxopco2,DC=com'."
+     MJ0JQJCJ| AD record not found
+     MJ0JQJCJ| EntraID record not found
+     --- MJ0HYNJX ---
+InTune | DELETING MSDC-MJ0HYNJX
+     MSDC-MJ0HYNJX| InTune record deleted
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0HYNJX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0HYNJX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0HYNJX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0HYNJX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0HYNJX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0HYNJX' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0HYNJX' under: 'DC=act-maxopco2,DC=com'."
+     MJ0HYNJX| AD record not found
+EntraID | DELETING MSDC-MJ0HYNJX
+     MSDC-MJ0HYNJX| EntraID record deleted
+     --- MJ0FT86G ---
+     MJ0FT86G| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0FT86G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0FT86G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0FT86G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0FT86G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0FT86G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0FT86G' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0FT86G' under: 'DC=act-maxopco2,DC=com'."
+     MJ0FT86G| AD record not found
+     MJ0FT86G| EntraID record not found
+     --- MJ0H6NPM ---
+     MJ0H6NPM| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0H6NPM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0H6NPM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0H6NPM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0H6NPM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0H6NPM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0H6NPM' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0H6NPM' under: 'DC=act-maxopco2,DC=com'."
+     MJ0H6NPM| AD record not found
+     MJ0H6NPM| EntraID record not found
+     --- MJ0H6NCL ---
+     MJ0H6NCL| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0H6NCL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0H6NCL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0H6NCL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0H6NCL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0H6NCL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0H6NCL' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0H6NCL' under: 'DC=act-maxopco2,DC=com'."
+     MJ0H6NCL| AD record not found
+     MJ0H6NCL| EntraID record not found
+     --- MJ0JQJCK ---
+     MJ0JQJCK| InTune record not found
+PS C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHD-MJ0JQJCK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHL-MJ0JQJCK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MHDK-MJ0JQJCK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDC-MJ0JQJCK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSD-MJ0JQJCK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSL-MJ0JQJCK' under: 'DC=act-maxopco2,DC=com'."
+>> TerminatingError(Get-ADComputer): "Cannot find an object with identity: 'MSDK-MJ0JQJCK' under: 'DC=act-maxopco2,DC=com'."
+     MJ0JQJCK| AD record not found
+     MJ0JQJCK| EntraID record not found
+annoonan.admin|InTune - MSDC-MJ094P6N-04-30-2024-0938|EntraID - MSDC-MJ094P6N-04-30-2024-0938|InTune - MHD-MJ06KGVX-04-30-2024-0938|EntraID - MHD-MJ06KGVX-04-30-2024-0938|InTune - MHDK-MJ09AYVD-04-30-2024-0938|AD - MHDK-MJ09AYVD-04-30-2024-0938|EntraID - MHDK-MJ09AYVD-04-30-2024-0938|InTune - MHD-MJ09BAXY-04-30-2024-0938|EntraID - MHD-MJ09BAXY-04-30-2024-0938|InTune - MHDK-MJ06KGX8-04-30-2024-0938|AD - MHDK-MJ06KGX8-04-30-2024-0938|EntraID - MHDK-MJ06KGX8-04-30-2024-0938|InTune - MHD-MJ07L3Y4-04-30-2024-0938|EntraID - MHD-MJ07L3Y4-04-30-2024-0938|InTune - MSDC-MJ0K9LDR-04-30-2024-0938|EntraID - MSDC-MJ0K9LDR-04-30-2024-0938|EntraID - MSDC-MJ0H7X3G-04-30-2024-0938|InTune - MSDC-MJ0HYNJX-04-30-2024-0938|EntraID - MSDC-MJ0HYNJX-04-30-2024-0938

@@ -1,3 +1,12 @@
+$padding = "     "
+$prefixes = "MHD-","MHL-","MHDK-", "MSDC-", "MSD-", "MSL-", "MSDK-"
+$Agent = $Env:UserName
+$OperatingMachine = $Env:ComputerName
+$ExecutionTimes = "$Agent"
+$Time = Get-Date -Format "MM-dd-yyyy-HHmm"
+
+
+Start-Transcript -Path "C:\Users\annoonan.admin\Desktop\Code\AD-AZCleaner\Logs\$Agent $Time.txt"
 #MUST USE ADMIN CREDENTIALS
 try {
     Write-Host "Connecting to Microsoft Graph" -ForegroundColor Cyan
@@ -9,13 +18,14 @@ try {
 }
 #MUST USE ADMIN CREDENTIALS
 
-$padding = "     "
-$prefixes = "MHD-","MHL-","MHDK-", "MSDC-", "MSD-", "MSL-", "MSDK-"
-
 Write-Host "Gathering devices from InTune, this may take a moment" -ForegroundColor Cyan
 $InTuneDevices = Get-MgDeviceManagementManagedDevice -All | Select-Object DeviceName, Id, UserId
 
-foreach ($SN in Get-Content .\CleanerDevices.txt) {
+foreach ($SN in Get-Content .\CleanerDevices.txt) {    
+    if ($SN.length -gt 8){
+        $SN = $SN.substring(12)
+    }
+
     Write-Host $padding"--- $SN ---"$padding -ForegroundColor Cyan
 
     #InTune record removal
@@ -28,6 +38,7 @@ foreach ($SN in Get-Content .\CleanerDevices.txt) {
                 if ((Read-Host $padding"$machine (y/n)") -eq 'y') {
                     Remove-MgDeviceManagementManagedDevice -ManagedDeviceId $device.Id
                     Write-Host $padding$Machine"| InTune record deleted" -ForegroundColor Green
+                    $ExecutionTimes += "|InTune - " + $machine + "-" + $time
                     #Write-Host $SN, $machine, $device.DeviceName, $device.Id, $device.UserId -ForegroundColor Green
                 } else {
                     Write-Host $padding$machine"| InTune record deletion skipped" -ForegroundColor Yellow
@@ -55,6 +66,7 @@ foreach ($SN in Get-Content .\CleanerDevices.txt) {
                         try {
                             Remove-ADComputer -Identity $machine -Confirm:$false
                             Write-Host $padding$machine"| AD record deleted" -ForegroundColor Green
+                            $ExecutionTimes += "|AD - " + $machine + "-" + $time
                         } catch {
                             Write-Host $padding"Record must be deleted manually" -ForegroundColor Red
                         }
@@ -84,6 +96,7 @@ foreach ($SN in Get-Content .\CleanerDevices.txt) {
             if ((Read-Host "$padding$machine delete EntraID record (y/n)") -eq 'y') {
                 Get-AzureADDevice -SearchString $machine | Remove-AzureADDevice
                 Write-Host $padding$machine"| EntraID record deleted" -ForegroundColor Green
+                $ExecutionTimes += "|EntraID - " + $machine + "-" + $time
             } else {
                 Write-Host $padding$machine": EntraID record deletion skipped" -ForegroundColor Yellow
             }  
@@ -95,6 +108,7 @@ foreach ($SN in Get-Content .\CleanerDevices.txt) {
         }
     }
 }
+Write-Host $ExecutionTimes
 Read-Host "Press any key to end program"
 #NOTES:
 #Use ($Count/($prefixes.Length)) to calculate what prefix/device the current loop is on.
